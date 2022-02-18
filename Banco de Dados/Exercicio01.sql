@@ -1,7 +1,7 @@
 -- BANCO DE DADOS SPINT1
 create database SPINT1;
-CREATE table auto_increment ATLETA (
-IDATLETA INT PRIMARY KEY,
+CREATE table ATLETA (
+IDATLETA INT auto_increment PRIMARY KEY,
 NOME VARCHAR (40),
 MODALIDADE VARCHAR (40),
 QTDMEDALHA INT);
@@ -14,7 +14,7 @@ insert into ATLETA values
 (default, 'Zico', 'Futebolista', 62),
 (default, 'Michael Phelps', 'Nadador', 28),
 (default, 'Cesar Cielo', 'Nadador', 3),
-(default, 'Acelono Popó', 'Boxeador', 4),
+(default, 'Acelono PopÃ³', 'Boxeador', 4),
 (default, 'Mike Tyson', 'Boxeador', 10);
 
 -- Exibir todos os dados da tabela.
@@ -41,7 +41,7 @@ select * from  atleta where NOME like 'C%';
 -- Exibir os dados da tabela, dos atletas cujo nome termine com a letra o.
 select * from  atleta where  NOME like '%o';
 
---  Exibir os dados da tabela, dos atletas cujo nome tenha a penúltima letra r.
+--  Exibir os dados da tabela, dos atletas cujo nome tenha a penÃºltima letra r.
 select * from atleta where NOME like '%r_';
 
 -- Eliminar a tabela.

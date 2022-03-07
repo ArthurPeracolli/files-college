@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 04 </title>
+</head>
+
+<body>
+    <div>
+        <h1 style="margin-left: 40%; font-size: 50px;">
+            <span style="color: green;">Bra</span><span style="color: #ffdf00;">sil</span> x Ale<span
+                style="color: #d60000;">ma</span><span style="color: #f7c800;">nha</span>
+        </h1>
+
+        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/2/2b/Confedera%C3%A7%C3%A3o_Brasileira_de_Futebol_2019.svg/1200px-Confedera%C3%A7%C3%A3o_Brasileira_de_Futebol_2019.svg.png" ;
+            style="width: 45px;margin-right: 9%;margin-left: 42%;">
+        <img src="https://logodownload.org/wp-content/uploads/2018/06/selecao-alemanha-logo-escudo.png"
+            ; style="width: 63px;">
+    </div>
+    <br>
+    <br>
+    <div style="margin-left: 38%;">
+        <button style="margin-right: 3%;" onclick="gol_brasil(), estilo_id()">Gol do Brasil</button>
+        <button onclick="gol_alemanha(), estilo2_id()" style="margin-right: 3%;">Gol da Alemanha</button>
+        <button onclick="recomecar_partida()">Recomeçar a Partida</button>
+    </div>
+    <br>
+    <b style="margin-left: 46%;font-size: 17px;">Tempo real do jogo</b>
+
+    <div id="gols_id1" style="width: 178px; float: left;">
+    </div>
+
+    <div id="gols_id2" style="width: 178px;">
+    </div>
+</body>
+
+</html>
+
+<script>
+    function gol_brasil() {
+        gols_id1.innerHTML +=
+            "<div>É goooolll do Brasil!!!</div>"
+        gols_id1.style.color = "green"
+    }
+    function estilo_id() {
+        gols_id1.style.marginLeft = "38%"
+        gols_id1.style.backgroundColor = "#ffffff"
+    }
+
+    function gol_alemanha() {
+        gols_id2.innerHTML +=
+            "<div>É goooolll da Alemanha!!!</div>"
+        gols_id2.style.backgroundColor = "red"
+        gols_id2.style.color = "#f7c800"
+    }
+    function estilo2_id() {
+        gols_id2.style.marginLeft = "55%"
+    }
+
+    function recomecar_partida() {
+        gols_id1.innerHTML = ""
+        gols_id2.innerHTML = ""
+    }
+</script>

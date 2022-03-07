@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule a sua frequência !</title>
+</head>
+
+<body>
+    <h1 style="color: tomato; margin-left: 40%;">Calcule a sua frequência</h1>
+    <br>
+    <div style="margin-left: 40%;">
+        Insira o seu nome: <input type="text" placeholder="Ex: João da Silva Saurro" id="aluno" style="margin-left: 162px;">
+        <br>
+        <br>
+        Insira a quantidade de aulas totais do curso: <input type="number" placeholder="Ex: 200, 300." id="aulas">
+        <br>
+        <br>
+        Insira a quantidade de aulas faltadas: <input type="number" placeholder="Ex: 5, 7." id="faltas" style="margin-left: 44px;">
+        <button onclick="calcular()" style="margin-left: 5px;">Calcular frequência</button>
+    </div>
+    <br>
+    <p id="r" style="margin-left: 40%;"></p>
+</body>
+
+</html>
+
+<script> function calcular() {
+        var n1 = Number(aulas.value)
+        var n2 = Number(faltas.value)
+        var freq = ((n1 - n2) /n1) * 100
+        var n = (aluno.value)
+        r.innerHTML = `Olá, ${n} ! Sua frequência foi de ${freq.toFixed(2)}%`
+    }
+
+
+
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule a força do guerreiro !</title>
+</head>
+
+<body>
+    <h1 style="color: orange;margin-left: 36%;"> Calcule a força do seu guerreiro Sayajin</h1>
+    <img src="https://i.pinimg.com/originals/60/a9/61/60a96199afa8469b7c3c46810ed86816.png"
+        style="width: 300px;margin-left: 42%;">
+
+    <div style="margin-left: 40%;">
+        Inserir Ki base do guerreiro: <input type="number" id="ki" placeholder="Ex: 1500, 3000">
+        <br>
+        <br>
+        <button onclick="ssj()" style="margin-right: 40px;">SSJ</button>
+        <button onclick="ssj2()">SSJ2</button>
+        <button onclick="ssj3()" style="margin-left: 40px;">SSJ3</button>
+    </div>
+    <p id="resultado" style="margin-left: 40%;"></p>
+    <img id="img" style="margin-left: 43%;">
+
+</body>
+
+</html>
+
+<script> function ssj() {
+        var ssj1 = Number(ki.value * 50)
+
+        resultado.innerHTML = `Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${ssj1}`
+        img.src = 'https://media1.giphy.com/media/ul1omlrGG6kpO/giphy.gif'
+    }
+
+    function ssj2() {
+        var sj2 = Number(ki.value * 100)
+
+        resultado.innerHTML = `Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${sj2}`
+        img.src = "https://c.tenor.com/QpNTGGt1c8EAAAAM/dbz-goku.gif"
+    }
+
+    function ssj3() {
+        var sj3 = Number(ki.value * 200)
+
+        resultado.innerHTML = `Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${sj3}`
+        img.src = "https://c.tenor.com/l1Pim-QIqvMAAAAM/gohan-ui-goku.gif"
+    }
+
+</script>

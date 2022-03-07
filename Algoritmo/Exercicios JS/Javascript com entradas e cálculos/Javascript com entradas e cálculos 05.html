@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule o valor da sua pizza !</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;color: green;">Calcule o valor da sua Pizza !</h1>
+    <br>
+    <div style="margin-left: 40%;">
+        Insira o sabor da sua pizza: <input type="text" id="sabor" style="margin-left: 94px;" placeholder="Ex: Calabresa.">
+        <br>
+        <br>
+        Insira o valor da sua pizza: <input type="number" style="margin-left: 95px;" id="valor" placeholder="Ex: 32,20 , 40, 47,55.">
+        <br>
+        <br>
+        Insira o número de amigos que irá comer: <input type="number" id="amigos" placeholder="Ex: 4, 7.">
+        <Button onclick="pizza()">Ver valor por amigo</Button>
+    </div>
+    <br>
+    <p id="r" style="margin-left: 40%"></p>
+</body>
+
+</html>
+
+<script> function pizza() {
+        var n1 = Number(valor.value)
+        var n2 = Number(amigos.value)
+        var c = n1 * 0.1
+        var div = (n1 + c) / n2
+
+        var s = (sabor.value)
+
+        r.innerHTML = `Cada amigo vai colaborar com <b>R$${div.toFixed(2)}</b> para a pizza de <u>${s}</u>.`
+
+    }
+
+
+</script>

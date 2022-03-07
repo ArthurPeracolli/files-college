@@ -1,2 +1,2 @@
 # files-college
-Arquivos da Faculdade
+Arquivos da Faculdade, projetos, exercícios e atividades 

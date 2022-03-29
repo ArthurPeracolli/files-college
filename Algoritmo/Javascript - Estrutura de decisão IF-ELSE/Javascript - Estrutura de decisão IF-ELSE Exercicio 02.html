@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+
+<body>
+    Insira o valor do saldo em sua conta: <input type="number" id="input_saldo"> <br>
+    Insira o valor que você deseja debitar: <input type="number" id="input_debito">
+    <button onclick="analisar_conta()">Analisar conta</button>
+    <div id="resultado"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function analisar_conta() {
+
+        var saldo = Number(input_saldo.value)
+        var debito = Number(input_debito.value)
+        var novo_saldo = saldo - debito
+
+
+
+        if (novo_saldo < 0) {
+            resultado.innerHTML = `o saldo atual da conta corrente é 
+            <b style="color: red;">R$ ${novo_saldo.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}.</b>`
+        }
+
+        else {
+            resultado.innerHTML = `o saldo atual da conta corrente é 
+            <i style="color: blue;">R$ ${novo_saldo.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}.</i>`
+        }
+    }
+
+
+</script>

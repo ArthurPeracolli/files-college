@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+
+<body>
+    insira o valor da pizza: <input type="number" id="input_valor_pizza"> <br>
+    Insira a quantidade de amigos: <input type="number" id="input_qtd_amigos"> <br>
+    Insira o valor maximo que deverá ser pago por cada amigo: <input type="number" id="input_valor_maximo">
+    <button onclick="calcular()">Rola a pizza ?</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var valor_pizza = Number(input_valor_pizza.value)
+        var qtd_amigos = Number(input_qtd_amigos.value)
+        var valor_maximo = Number(input_valor_maximo.value)
+
+        var rateio = valor_pizza / qtd_amigos
+
+        if (rateio <= valor_maximo) {
+            resultado.innerHTML = `Cada amigo vai pagar R$${rateio.toLocaleString('pt-BR', { maximumFractionDigits: 2, minimumFractionDigits: 2 })}
+                 pela pizza. Uhu! Vamos pedir a pizza!`
+        }
+        else {
+            resultado.innerHTML = ` O valor para cada amigo ficou R$ ${rateio.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+             Deu ruim paizão! Pizza muito cara!`
+        }
+    }
+</script>

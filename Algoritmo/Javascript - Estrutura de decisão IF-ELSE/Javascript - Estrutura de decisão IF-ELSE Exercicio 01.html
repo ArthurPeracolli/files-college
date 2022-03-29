@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+</head>
+
+<body>
+    Insira o seu nome: <input type="text" id="input_nome_aluno"> <br>
+    Insira a sua idade: <input type="number" id="input_idade_aluno">
+    <button onclick="avaliar_aluno()">Avaliar aluno</button>
+    <div id="resultado"></div>
+
+</body>
+
+</html>
+
+<script>
+    function avaliar_aluno() {
+        var idade = Number(input_idade_aluno.value)
+        var nome = (input_nome_aluno.value)
+
+        var perctIdade = (idade / 18) * 100
+
+        if (idade >= 18) {
+            resultado.innerHTML = `${nome} vamos tirar a CNH?`
+        }
+
+        else {
+            resultado.innerHTML = `${nome}, você possui ${perctIdade.toFixed(2)}% da idade necessária para tirar a CNH, vá jogar Playstation!`
+        }
+    }
+</script>

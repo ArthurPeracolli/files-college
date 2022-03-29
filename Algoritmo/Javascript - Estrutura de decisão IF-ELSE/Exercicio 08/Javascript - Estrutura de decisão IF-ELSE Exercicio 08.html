@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+    <link rel="stylesheet" href="exercicio 8.css">
+</head>
+
+<body>
+    <div class="header">
+        Calcule sua média de gols
+    </div>
+
+    <div class="banner">
+        <div class="container">
+            Insira quantas partidas você jogou:
+            <input type="number" id="input_qtd_partidas" placeholder="Ex: 10, 20, 30..."> <br>
+            Insira quantas gols você marcou:
+            <input type="number" id="input_qtd_gols" placeholder="Ex: 5, 10, 15...">
+            <button onclick="estudar()" class="btn">
+                Estudar atacante
+            </button>
+            <div id="resultado">
+            </div>
+            <img id="img_jogador" style="width: 250px;">
+            <p id="media_gols"></p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function estudar() {
+        var qtd_partidas = Number(input_qtd_partidas.value)
+        var qtd_gols = Number(input_qtd_gols.value)
+        var media = qtd_gols / qtd_partidas
+
+        if (media < 0.2) {
+            resultado.innerHTML = `Melhor mudar de posição! <br>`
+            img_jogador.src = "https://c.tenor.com/1Ygc3CUjhSoAAAAC/gol-perdido-deivid.gif"
+            media_gols.innerHTML = `Sua média de gols/partida é de <b>${media.toFixed(1)}</b>`
+        }
+
+        else {
+            resultado.innerHTML = `Atacante mediano! <br>`
+            img_jogador.src = "https://i.imgur.com/DMcweY3.gif"
+            media_gols.innerHTML = `Sua média de gols/partida é de <b>${media.toFixed(1)}</b>`
+        }
+        if (media >= 0.6) {
+            resultado.innerHTML = `Atacante de futuro! <br>`
+            img_jogador.src = "https://c.tenor.com/vBaTHcLmp8wAAAAd/ronaldo-goal.gif"
+            media_gols.innerHTML = `Sua média de gols/partida é de <b>${media.toFixed(1)}</b>`
+
+        }
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+</head>
+
+<body>
+    Insira a temperatura do ambiente: <input type="number" id="input_temperatura">
+    <button onclick="analisar()">Verificar clima</button>
+
+    <div id="resultado">
+    </div> <br>
+
+    <img id="img_alimento">
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        var temperatura = Number(input_temperatura.value)
+
+        if (temperatura < 10) {
+            resultado.innerHTML = `Temperatura apropriada para conservar alimento`
+            img_alimento.src = "https://ichef.bbci.co.uk/news/640/cpsprodpb/89E2/production/_106589253_amino.jpg"
+        }
+
+        else {
+            resultado.innerHTML = `Temperatura inapropriada para corservar alimentos`
+            img_alimento.src = "https://st2.depositphotos.com/15719780/45686/i/600/depositphotos_456860054-stock-photo-spoiled-rotten-foods-with-mold.jpg"
+        }
+    }
+</script>

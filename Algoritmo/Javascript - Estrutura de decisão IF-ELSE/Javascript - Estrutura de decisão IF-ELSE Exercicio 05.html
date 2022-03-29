@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+
+<body>
+    Insira a sua frequência: <input type="number" id="input_frequencia">
+    <button onclick="analisar()">Analisar frequencia</button>
+    <div>
+        <img style="width: 500px;" id="imagem_resultado">
+        <img style="width: 500px;" id="nerd">
+    </div>
+
+</body>
+
+</html>
+<script>
+    function analisar() {
+        var frequencia = Number(input_frequencia.value)
+
+        if (frequencia < 50) {
+            imagem_resultado.src = 'https://ogimg.infoglobo.com.br/in/23886006-8a0-245/FT1086A/WhatsApp-Image-2019-08-18-at-17.58.32.jpeg.jpg'
+        }
+
+        else {
+            imagem_resultado.src = 'https://static.wixstatic.com/media/40ac2a_8ee265a7165a4890b7ba8c0ef1514bed~mv2.jpg/v1/fill/w_1000,h_1000,al_c,q_90/40ac2a_8ee265a7165a4890b7ba8c0ef1514bed~mv2.jpg'
+        }
+
+    }
+
+
+</script>

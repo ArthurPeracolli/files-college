@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width: 30%; margin-left: 45%;">
+        <h1>Calcularonaldo !!</h1>
+    </div>
+
+    <Div style="width: 40%; margin-left: 40%;"><img
+            src="https://www.istoedinheiro.com.br/wp-content/uploads/sites/17/2022/02/cr7-418x235.jpg">
+    </Div>
+
+    <br>
+
+    <div style="width: 30%; margin-left: 40%;"> Primeiro número: <input id="primeiro_numero"
+            placeholder="Insira um numero" type="number">
+        <br>
+        Segundo número: <input id="segundo_numero" placeholder="Insira um número" type="number">
+        <br>
+        <br>
+    </div>
+    <div style="width: 30%; margin-left: 40%;"> <button onclick="somar()" ; style="margin-right: 30px;">Somar</button>
+        <button onclick="subtrair()" ; style="margin-right: 30px;">Subtrair</button>
+        <button onclick="multiplicar()" ; style="margin-right: 30px;">Multiplicar</button>
+        <button onclick="dividir()" ; style="margin-right: 30px;">Dividir</button>
+    </div>
+
+
+</body>
+
+</html>
+
+<script> function somar() {
+        var n1 = Number(primeiro_numero.value)
+        var n2 = Number(segundo_numero.value)
+        var soma = n1 + n2
+
+        alert("Soma: " + soma + " SIIIIIIIIIIIU")
+    }
+
+    function subtrair() {
+        var n1 = Number(primeiro_numero.value)
+        var n2 = Number(segundo_numero.value)
+        var subtrair = n1 - n2
+        alert("Subtração: " + subtrair + " SIIIIIIIIIIIU")
+    }
+
+    function multiplicar() {
+        var n1 = Number(primeiro_numero.value)
+        var n2 = Number(segundo_numero.value)
+        var multiplicar = n1 * n2
+        alert("Multiplicação: " + multiplicar + " SIIIIIIIIIIIU")
+    }
+
+    function dividir() {
+        var n1 = Number(primeiro_numero.value)
+        var n2 = Number(segundo_numero.value)
+        var dividir = n1 / n2
+        alert("Divisão: " + dividir + " SIIIIIIIIIIIU")
+
+    }
+
+
+</script>

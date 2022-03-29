@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div_id" ; style="font-size: 23px;">
+    </div>
+    <h1 style="margin-left: 43%; font-size: 40px;">Selecione um alimento !!</h1>
+    <br>
+    <br>
+    <button onclick="carnes(), altera_estilo()">Carnes</button>
+    <button onclick="legumes()"> Legumes</button>
+    <button onclick="frutas()">Frutas</button>
+</body>
+<div style="width: 30px;"></div>
+
+</html>
+
+<script>
+    function carnes() {
+        div_id.innerHTML +=
+            "<div>Eu gosto de carnes !</div>"
+        div_id.style.backgroundColor =
+            "red"
+        div_id.style.color =
+            "white"
+    }
+
+    function legumes() {
+        div_id.innerHTML +=
+            "<div>Um leguminho não faz mal a ninguém !</div>"
+        div_id.style.backgroundColor =
+            "black"
+        div_id.style.color =
+            "yellow"
+    }
+    function frutas() {
+        div_id.innerHTML +=
+            "<div>Uma frutinha até que vai bem !</div>"
+        div_id.style.backgroundColor =
+            "white"
+        div_id.style.color =
+            "green"
+    }
+    function altera_estilo() {
+        div_id.style.width = "200px";
+    }
+</script>

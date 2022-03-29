@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 03</title>
+</head>
+
+<body>
+    <h1 style="color: blue; margin-left: 40%;">Contagem de votos.</h1>
+    <div style="margin-left: 40%;">
+        <input type="number" placeholder="Candidato A" id="cand_a">
+        <br>
+        <input type="number" placeholder="Candidato B" id="cand_b">
+        <br>
+        <input type="number" placeholder="Votos Brancos" id="brancos">
+        <br>
+        <input type="number" placeholder="Votos Nulos" id="nulos">
+        <br>
+        <button onclick="resultados()">Resultado da eleição</button>
+        <br>
+
+        <h3>Candidato A:</h3> <b>
+            <P id="contagem_a"></P>
+            <div id="div_a">
+            </div>
+
+        </b>
+
+        <h3>Candidato B:</h3> <b>
+            <p id="contagem_b"></p>
+
+            <div id="div_b"></div>
+
+        </b>
+
+        <h3>Inválidos:</h3> <b>
+            <p id="contagem_c"></p>
+            <div id="inval_id">
+            </div>
+        </b>
+
+        <h3>Total:</h3> <b>
+            <p id="total_id"></p>
+        </b>
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script> function resultados() {
+        var n1 = Number(cand_a.value)
+        var n2 = Number(cand_b.value)
+        var n3 = Number(brancos.value)
+        var n4 = Number(nulos.value)
+        var total = Number(n1 + n2 + n3 + n4)
+        var percent_a = Number(n1 / total) * 100
+        var percent_b = Number(n2 / total) * 100
+        var percent_c = Number((n3 + n4) / total) * 100
+
+        contagem_a.innerHTML = percent_a
+    }
+
+
+</script>

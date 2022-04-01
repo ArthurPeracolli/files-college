@@ -99,3 +99,16 @@ input{
     flex-direction: column;
     border-radius: 15px;
 }
+
+.btn2 {
+    border: 0;
+    font-family: monospace;
+    border-radius: 4px;
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 0;
+    color: #e6005a;
+    background-color: white;
+    width: 120px;
+}
+

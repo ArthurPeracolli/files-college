@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h4>Rua A:</h4>
+        <select id="semaforo">
+            <option value="0">Parado</option>
+            <option value="1">Andando</option>
+        </select>
+    </div>
+
+    <div>
+        <h4>Rua B:</h4>
+        <select id="semaforo2">
+            <option value="0">Parado</option>
+            <option value="1">Andando</option>
+        </select>
+    </div> <br>
+    <button onclick="analisar()">Simular</button>
+    <p id="txt"></p>
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        if (semaforo.value == "1" && semaforo2.value == "1") {
+        txt.innerHTML = "Risco de colissão."
+        }
+
+        else if (semaforo.value == "0" && semaforo2.value == "0") {
+        txt.innerHTML = "Risco de engarrafamento."
+        }
+
+        else {
+        txt.innerHTML = "Fluxo perfeito."
+        }
+    }
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Qual será a forma de pagamento: <select id="pagamento">
+        <option value="dinheiro">Dinheiro</option>
+        <option value="cartao_debito">Cartão de débito</option>
+        <option value="cartao_credito">Cartão de crédito</option>
+        <option value="boleto">Boleto</option>
+    </select>
+    <button onclick="analisar()">Analisar compra</button>
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        if (pagamento.value == "dinheiro" ||
+            pagamento.value == "cartao_debito") {
+            alert("Você terá que pagar a vista")
+        }
+
+        else {
+            alert("Pagamento poderá ser parcelado")
+        }
+    }
+</script>

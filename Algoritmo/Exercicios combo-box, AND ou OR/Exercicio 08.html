@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira o nome da empresa: <input id="input_nome_empresa"> <br> <br>
+    Insira o valor da bolsa da empresa: <input type="number" id="input_valor_bolsa"> <br> <br>
+    Insira o valor do VR: <input type="number" id="input_valor_vr"> <br> <br>
+    Insira o tempo de deslocamento: <input type="number" id="input_tempo_deslocamento">
+    <button onclick="analisar()">É preferida?</button>
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        var nome_empresa = (input_nome_empresa.value)
+        var valor_bolsa = Number(input_valor_bolsa.value)
+        var valor_vr = Number(input_valor_vr.value)
+        var tempo_deslocamento = Number(input_tempo_deslocamento.value)
+
+        if (valor_bolsa >= 1800 &&
+            valor_vr >= 20 &&
+            tempo_deslocamento <= 30) {
+            alert(`A empresa ${nome_empresa} é uma de suas preferências.`)
+        }
+
+        else {
+            alert(`A empresa ${nome_empresa} está fora da lista.`)
+        }
+    }
+</script>

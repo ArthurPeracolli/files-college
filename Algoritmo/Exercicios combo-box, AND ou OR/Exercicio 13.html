@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13</title>
+</head>
+
+<body>
+    Insira a nota da avaliação: <input type="number" id="input_avaliacao">
+    <button onclick="avaliar()">Avaliar</button> <br>
+    <img id="img">
+
+</body>
+
+</html>
+
+<script>
+    function avaliar() {
+        var avaliacao = Number(input_avaliacao.value)
+
+        if (avaliacao < 0 || avaliacao > 5) {
+            alert("Nota inválida. Digite de 0 a 5")
+        }
+
+        else if (avaliacao < 0.5) {
+            img.src = "https://thumbs.dreamstime.com/b/five-stars-icon-rating-review-website-mobile-apps-white-background-vector-illustration-227542504.jpg"
+        }
+
+        else if (avaliacao < 1) {
+            img.src = "https://static.wikia.nocookie.net/dublagempedia/images/5/53/Scooby-Doo.png/revision/latest/scale-to-width-down/369?cb=20180312193516&path-prefix=pt-br"
+        }
+
+        else if (avaliacao < 1.5) {
+            img.src = "https://media.istockphoto.com/vectors/one-stars-customer-product-rating-review-flat-icon-vector-id1272931929"
+        }
+
+        else if (avaliacao < 2) {
+            img.src = "https://charcutaria.org/wp-content/uploads/2016/12/salsicha-1200x900.jpg"
+        }
+
+        else if (avaliacao < 2.5) {
+            img.src = "https://upload.wikimedia.org/wikipedia/pt/3/36/Scooby-Doo.jpg"
+        }
+
+        else if (avaliacao < 3) {
+            img.src = "https://p2.trrsf.com/image/fget/cf/1200/675/middle/images.terra.com/2021/06/15/18702652-scoobydoo.jpg"
+        }
+
+        else if (avaliacao < 3.5) {
+            img.src = "https://i.ytimg.com/vi/uxW0d7dKM24/maxresdefault.jpg"
+        }
+
+        else if (avaliacao < 4) {
+            img.src = "https://img.quizur.com/f/img5c5f00d11f4729.87227477.png?lastEdited=1549730016"
+        }
+
+        else if (avaliacao < 4.5) {
+            img.src = "https://www.planocritico.com/wp-content/uploads/2021/01/187-Scooby-Doo-Episodios-Especiais-Parte-12.jpg"
+        }
+
+        else {
+            img.src = "https://a-static.mlcdn.com.br/574x431/painel-de-festa-scooby-doo-05-colormyhome/colormyhome/2391/0aed9bcd2ae0a659d8fe59ac539d4ce0.jpg"
+        }
+    }
+</script>

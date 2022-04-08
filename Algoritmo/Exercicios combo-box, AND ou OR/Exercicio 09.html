@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09</title>
+</head>
+
+<body>
+    <select id="arroz">
+        <option value="arroz_branco">Arroz Branco</option>
+        <option value="arroz_int">Arroz Integral</option>
+    </select>
+
+    Insira o tempo de cozimento do arroz: <input type="number" id="input_tempo">
+    Insira a quantidade de sal usada, em gramas: <input type="number" id="input_qtd_sal">
+    <button onclick="analisar()">Analisar arroz</button>
+    <br> <img id="img_arroz">
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        var tempo = Number(input_tempo.value)
+        var qtd_sal = Number(input_qtd_sal.value)
+        var arroz_branco = arroz.value == "arroz_branco" && tempo == 10 && qtd_sal <= 10
+        var arroz_int = arroz.value == "arroz_int" && tempo == 20 && qtd_sal <= 15
+
+        if (arroz_branco || arroz_int) {
+            alert("Arroz perfeito")
+            img_arroz.src = "https://img.itdg.com.br/tdg/images/recipes/000/000/770/323683/323683_original.jpg?mode=crop&width=710&height=400"
+        }
+
+        else {
+            alert("Seu arroz não está perfeito")
+            img_arroz.src = "https://claudia.abril.com.br/wp-content/uploads/2020/01/meme-jacquin-furioso-pesadelo-na-cozinha-pe-de-fava-1-1.jpg?quality=85&strip=info"
+        }
+
+    }
+</script>

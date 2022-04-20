@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h4>Frequentador A:</h4>
+        <select id="freq">
+            <option value="0">Não irei neste fim de semana</option>
+            <option value="1">Irei neste fim de semana</option>
+        </select>
+    </div>
+
+    <div>
+        <h4>Frequentador B:</h4>
+        <select id="freq2">
+            <option value="0">Não irei neste fim de semana</option>
+            <option value="1">Irei neste fim de semana</option>
+        </select>
+    </div>
+    <br>
+    <button onclick="analisar()">Checar aglomeração</button>
+    <p id="txt"></p>
+</body>
+
+</html>
+
+<script>
+    function analisar() {
+        if (freq.value == "0" && freq2.value == "1") {
+            txt.innerHTML = "Risco baixo de aglomeração, 50% das pessoas estarão no parque."
+        }
+
+        else if (freq.value == "0" && freq2.value == "0") {
+            txt.innerHTML = "Risco 0 de aglomeração, perfeito."
+        }
+
+        else if (freq.value == "1" && freq2.value == "0") {
+            txt.innerHTML = "Risco baixo de aglomeração, 50% das pessoas estarão no parque."
+        }
+
+        else {
+            txt.innerHTML = "Risco alto de aglomeração, 100% de ocupação."
+        }
+    }
+</script>

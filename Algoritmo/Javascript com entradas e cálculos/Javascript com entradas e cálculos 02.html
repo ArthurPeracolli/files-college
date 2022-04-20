@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule os votos</title>
+</head>
+
+<body>
+    <h1 style="color: blueviolet; margin-left: 40%;">Calcule o Resultado da Eleição</h1>
+    <br>
+    <br>
+    <div style="margin-left: 40%;">
+        Quantidade de votos candidato A: <input type="number" id="candi_a" placeholder="Ex: 1500, 1700">
+        <br>
+        <br>
+        Quantidade de votos candidato B: <input type="number" id="candi_b" placeholder="Ex: 1500, 1700">
+        <br>
+        <br>
+        Quantidade de votos Brancos: <input type="number" id="brancos" placeholder="Ex: 1500, 1700"
+            style="margin-left: 2.2%;">
+        <br>
+        <br>
+        Quantidade de votos Nulos: <input type="number" id="nulos" placeholder="Ex: 1500, 1700"
+            style="margin-left: 3.3%;">
+        <button onclick="calcular()" style="margin-left: 3.5%;">Calcular Votação</button>
+        <br>
+        <br>
+        <p style="margin-left: 19%;" id="resultado"></p>
+</body>
+
+</html>
+
+<script> function calcular() {
+    var n1 = Number (candi_a.value)
+    var n2 = Number (candi_b.value)
+    var n3 = Number (brancos.value)
+    var n4 = Number (nulos.value)
+    var n5 = Number (n3 + n4)
+    var total = Number (n1 + n2 + n3 + n4)
+
+    var p_a = Number (n1 /total) * 100
+    var p_b = Number (n2 / total) * 100
+    var p_i = Number (n5 / total) * 100
+
+    resultado.innerHTML = `<b>Total de Votos: <u>${total}</u></b><br>
+                           <b>Candidato A:</b> ${p_a.toFixed(2)}% (${n1} votos) <br>
+                           <b>Candidato B:</b> ${p_b.toFixed(2)}% (${n2} votos) <br>
+                           <b>Inválidos:</b> ${p_i.toFixed(2)}% (${n5} votos)`
+}
+
+
+</script>

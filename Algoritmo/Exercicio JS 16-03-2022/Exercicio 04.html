@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+
+<body>
+    <button onclick="mover_para_esquerda()">Mover para esquerda</button>
+    <button onclick="mover_para_direita()">Mover para a direita</button>
+    Quantos pixels:<input type="number" id="mover"><br> <br>
+    <img style="margin:auto; display: block;"
+        src="https://i.pinimg.com/originals/00/51/7a/00517a37e0bcb9a52e3dad26de784da0.jpg" id="imagem_bart">
+
+</body>
+
+</html>
+
+<script>
+    function mover_para_direita() {
+        imagem_bart.style.marginRight = `${mover.value}px`
+
+    }
+
+    function mover_para_esquerda() {
+        imagem_bart.style.marginLeft = `${mover.value}px`
+
+    }
+
+
+</script>

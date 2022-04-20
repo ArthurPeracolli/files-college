@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule o valor do seu VT !</title>
+</head>
+
+<body>
+    <h1 style="color: rgb(168, 168, 22); margin-left: 40%;">Calcule o valor do seu VT Mensal !</h1>
+    <br>
+    <div style="margin-left: 40%;">
+        Inserir o valor da passagem de ônibus: <input type="number" id="v" placeholder="Ex: 4,20.">
+        <br>
+        <br>
+        Inserir a quantidade de viagens por mês: <input type="number" id="q" placeholder="Ex: 150, 200.">
+        <br>
+        <br>
+        Inserir distancia do trajeto em Km: <input type="number" id="d" placeholder="Ex: 10, 20.">
+        <button onclick="calcular()"> Calcular VT </button>
+    </div>
+    <p id="r"></p>
+</body>
+
+</html>
+
+<script> function calcular() {
+        var val = Number(v.value)
+        var qtd = Number(q.value)
+        var dis = Number(d.value)
+        var app = (qtd * 0.10) + (0.75 * dis)
+
+        var total = val * qtd + app
+
+        r.innerHTML = `Você vai gastar R$${total.toFixed(2)} por mês com transporte.`
+         
+
+}
+
+
+</script>
